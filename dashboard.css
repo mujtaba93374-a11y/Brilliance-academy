@@ -1,0 +1,162 @@
+/* Brilliance Academy – Student Dashboard */
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#1E3A8A,#60A5FA);
+  color:#111827;
+  min-height:100vh;
+  padding-bottom:70px;
+}
+
+/* Top Bar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  padding:15px 20px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.topbar h2{color:#1E3A8A;font-weight:600;font-size:18px;}
+.logout-btn{
+  background:#F97316;
+  color:#fff;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Dashboard Layout */
+.dashboard{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* Generic Card */
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  animation:fadeIn 0.4s ease;
+}
+.card h3{
+  color:#1E3A8A;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* Subjects Grid */
+.subjects .grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:12px;
+}
+.subject-card{
+  background:#60A5FA;
+  color:#fff;
+  text-align:center;
+  padding:20px 0;
+  border-radius:15px;
+  font-weight:600;
+  transition:transform 0.2s;
+}
+.subject-card:hover{transform:scale(1.05);}
+
+/* Homework List */
+.homework .list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.hw-item{
+  background:#F9FAFB;
+  padding:12px 15px;
+  border-radius:10px;
+  border-left:5px solid #1E3A8A;
+}
+
+/* Progress Bar */
+.progress .bar{
+  background:#E5E7EB;
+  border-radius:10px;
+  height:10px;
+  overflow:hidden;
+  margin:10px 0;
+}
+.progress .fill{
+  height:100%;
+  background:#F97316;
+  width:0%;
+  border-radius:10px;
+  transition:width 0.5s ease;
+}
+
+/* Upload Form */
+.upload form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.upload select,
+.upload textarea,
+.upload input[type="file"]{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #E5E7EB;
+}
+.upload .btn{
+  background:#F97316;
+  color:#fff;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.upload .btn:hover{background:#fb923c;}
+
+/* Animation */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .dashboard{padding:15px;}
+}
+/* === Teacher Dashboard Enhancements === */
+#homeworkList, #submissionList, #topperList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hw-card, .submission-card, .topper-card {
+  background: #F9FAFB;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border-left: 5px solid #1E3A8A;
+}
+
+.grade-btn {
+  background: #60A5FA;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.grade-btn:hover {
+  background: #1E3A8A;
+}

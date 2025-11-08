@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brilliance Academy | Student Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <h2 id="welcomeText">Welcome back 👋</h2>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <!-- Subjects -->
+    <section class="card subjects">
+      <h3><i data-feather="book"></i> My Subjects</h3>
+      <div class="grid">
+        <div class="subject-card">Maths</div>
+        <div class="subject-card">Science</div>
+        <div class="subject-card">English</div>
+        <div class="subject-card">Social Studies</div>
+      </div>
+    </section>
+
+    <!-- Homework -->
+    <section class="card homework">
+      <h3><i data-feather="file-text"></i> My Homework</h3>
+      <div id="homeworkList" class="list"></div>
+    </section>
+
+    <!-- Progress -->
+    <section class="card progress">
+      <h3><i data-feather="activity"></i> My Progress</h3>
+      <div class="bar">
+        <div class="fill" id="progressFill"></div>
+      </div>
+      <p id="progressText">0 % completed</p>
+    </section>
+
+    <!-- Upload -->
+    <section class="card upload">
+      <h3><i data-feather="upload"></i> Upload Homework</h3>
+      <form id="uploadForm">
+        <select id="hwSubject" required>
+          <option value="" disabled selected>Select Subject</option>
+          <option>Maths</option>
+          <option>Science</option>
+          <option>English</option>
+          <option>Social Studies</option>
+        </select>
+        <textarea id="hwText" placeholder="Type your homework…" rows="4"></textarea>
+        <input type="file" id="hwFile" accept=".pdf" />
+        <button type="submit" class="btn">Submit Homework</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>

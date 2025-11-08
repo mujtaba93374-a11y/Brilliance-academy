@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brilliance Academy | Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <h2 id="welcomeText">Welcome back, Admin 👋</h2>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <!-- Admissions -->
+    <section class="card">
+      <h3><i data-feather="user-plus"></i> New Admissions</h3>
+      <div id="admissionList"></div>
+    </section>
+
+    <!-- All Students -->
+    <section class="card">
+      <h3><i data-feather="users"></i> All Students</h3>
+      <div id="studentList"></div>
+    </section>
+
+    <!-- All Homework -->
+    <section class="card">
+      <h3><i data-feather="file-text"></i> Homework Overview</h3>
+      <div id="homeworkList"></div>
+    </section>
+
+    <!-- Graph Section -->
+    <section class="card">
+      <h3><i data-feather="bar-chart-2"></i> Academy Analytics</h3>
+      <canvas id="statsChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>

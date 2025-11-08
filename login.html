@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brilliance Academy | Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <!-- App Header -->
+    <div class="app-header">
+      <h1 class="app-title">Brilliance Academy</h1>
+      <p class="app-subtitle">NH1 Hanjiwera Payeen, Pattan, Baramulla</p>
+    </div>
+
+    <!-- Login/Register Card -->
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" id="loginTab">Login</button>
+        <button class="tab" id="registerTab">Register</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="form active">
+        <h2>Welcome Back 👋</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit" class="btn">Login</button>
+        <p class="note">Forgot Password?</p>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="form">
+        <h2>Create Account 📝</h2>
+        <input type="text" id="regName" placeholder="Full Name" required>
+        <select id="regClass" required>
+          <option value="" disabled selected>Select Class</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Developed by <a href="https://mujtabarather.netlify.app" target="_blank">Mujtaba Hussain</a></p>
+    </footer>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

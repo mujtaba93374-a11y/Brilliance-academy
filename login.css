@@ -1,0 +1,154 @@
+/* Login Page Styles - Brilliance Academy */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1E3A8A, #60A5FA);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #111827;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* App Header */
+.app-header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #60A5FA; }
+  100% { text-shadow: 0 0 20px #F97316; }
+}
+
+.app-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  color: #6B7280;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab.active {
+  color: #1E3A8A;
+  border-bottom: 3px solid #F97316;
+}
+
+/* Forms */
+.form {
+  display: none;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease;
+}
+
+.form.active {
+  display: flex;
+}
+
+.form h2 {
+  margin-bottom: 15px;
+  color: #1E3A8A;
+  text-align: center;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #60A5FA;
+  outline: none;
+}
+
+.btn {
+  background: #F97316;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fb923c;
+}
+
+.note {
+  text-align: center;
+  color: #6B7280;
+  font-size: 13px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #F97316;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

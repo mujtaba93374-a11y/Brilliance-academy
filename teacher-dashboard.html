@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brilliance Academy | Teacher Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <h2 id="welcomeText">Welcome Teacher 👋</h2>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <!-- Upload Homework -->
+    <section class="card">
+      <h3><i data-feather="upload"></i> Upload Homework</h3>
+      <form id="hwForm">
+        <input type="text" id="hwTitle" placeholder="Homework Title" required />
+        <select id="hwClass" required>
+          <option value="" disabled selected>Select Class</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+        <input type="text" id="hwSubject" placeholder="Subject" required />
+        <textarea id="hwText" placeholder="Homework Description..." rows="4"></textarea>
+        <input type="file" id="hwFile" accept=".pdf" />
+        <button type="submit" class="btn">Upload Homework</button>
+      </form>
+    </section>
+
+    <!-- Homework List -->
+    <section class="card">
+      <h3><i data-feather="file-text"></i> Class Homework</h3>
+      <div id="homeworkList"></div>
+    </section>
+
+    <!-- Submissions -->
+    <section class="card">
+      <h3><i data-feather="users"></i> Student Submissions</h3>
+      <div id="submissionList"></div>
+    </section>
+
+    <!-- Ranking -->
+    <section class="card">
+      <h3><i data-feather="award"></i> Class Topper</h3>
+      <div id="topperList"></div>
+    </section>
+  </main>
+
+  <script src="teacher.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
