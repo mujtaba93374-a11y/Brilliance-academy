@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (email === "admin@brillianceacademy.com" && password === "admin123") {
       localStorage.setItem("academy_session", JSON.stringify({ name: "Admin", role: "admin" }));
       alert("Welcome Admin 👋");
-      window.location.href = "../admin-dashboard.html";
+      window.location.href = "admin-dashboard.html";
       return;
     }
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (email === "teacher@brillianceacademy.com" && password === "teach123") {
       localStorage.setItem("academy_session", JSON.stringify({ name: "Teacher", role: "teacher" }));
       alert("Welcome Teacher 👋");
-      window.location.href = "../teacher-dashboard.html";
+      window.location.href = "teacher-dashboard.html";
       return;
     }
 
@@ -85,6 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("academy_session", JSON.stringify(user));
     alert(`Welcome back, ${user.name}!`);
-    window.location.href = "../student-dashboard.html";
+    window.location.href = "student-dashboard.html";
   });
 });
